@@ -1,0 +1,15 @@
+{
+  "name": "meu-ip",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/request-ip": "^0.0.41"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "request-ip": "^3.3.0"
+  }
+}
