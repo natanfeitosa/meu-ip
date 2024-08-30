@@ -1,7 +1,7 @@
-import { getClientIp } from "request-ip";
+import getClientIp from "./getClientIp";
 
 const server = Bun.serve({
-  fetch(req: Request): Response | Promise<Response> {
+  fetch(req): Response | Promise<Response> {
     //@ts-ignore
     return Response.json({ ip: getClientIp(req) });
   },
