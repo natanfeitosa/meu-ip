@@ -1,7 +1,9 @@
+import { getClientIp } from "request-ip";
+
 const server = Bun.serve({
   fetch(req: Request): Response | Promise<Response> {
-    const { port, ...ip } = this.requestIP(req) || { port: undefined };
-    return Response.json(ip);
+    //@ts-ignore
+    return Response.json({ ip: getClientIp(req) });
   },
 
   // Optional port number - the default value is 3000
